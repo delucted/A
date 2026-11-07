@@ -15,7 +15,7 @@ pub struct Token {
     literal: Option<Literal>
 }
 
-enum Expr {
+pub enum Expr {
     Binary { left: Box<Expr>, operator: Token, right: Box<Expr> },
     Unary { operator: Token, right: Box<Expr> },
     Paren(Box<Expr>),
